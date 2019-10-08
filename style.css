@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* { box-sizing: border-box; }
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  padding: 5px;
+  width: 100%;
+  margin: 0px auto;
+}
+header {
+  padding: 1 15px;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.column {
+  flex: 1;
+  border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+  
+}
+
+
+h1{
+  text-align: center;
+}
+ h2{
+  float: right;
+  position: relative;
+  background-color: #2aa;
+  color: #000;
+  
+}
+.column h2 {
+  position: relative;
+  left: 8px;
+  bottom: 30px;
+  border: 1px solid #000;
+
+}
+ 
+footer {
+  background: #5d5d5d;
+  position: absolute;
+  bottom: 0;
+  width:  100%;
+  height: 10px;
+ margin: 0px auto;
+}
+
+@media screen and (max-width: 991px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
